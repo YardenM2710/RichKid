@@ -1,11 +1,11 @@
 var isOpen = false;
 var navBar = document.querySelector('.navbar-section');
-var deviderX = document.querySelectorAll('.card-devider-x');
-var deviderY = document.querySelectorAll('.card-devider-y');
+var dividerX = document.querySelectorAll('.card-divider-x');
+var dividerY = document.querySelectorAll('.card-divider-y');
 
 function onInit() {
-  createDevidersX();
-  createDevidersY();
+  createDividersX();
+  createDividersY();
 }
 
 function toggleNavBar() {
@@ -13,24 +13,24 @@ function toggleNavBar() {
   isOpen = !isOpen;
 }
 
-function createDevidersX() {
+function createDividersX() {
   var strHtml = '';
   for (var i = 0; i < 30; i++) {
     strHtml += '<img src="./images/seperator-x.png">';
   }
 
-  deviderX.forEach((element) => {
+  dividerX.forEach((element) => {
     element.innerHTML = strHtml;
   });
 }
 
-function createDevidersY() {
+function createDividersY() {
   var strHtml = '';
   for (var i = 0; i < 35; i++) {
     strHtml += '<img src="./images/seperator-y.png">';
   }
 
-  deviderY.forEach((element) => {
+  dividerY.forEach((element) => {
     element.innerHTML = strHtml;
   });
 }

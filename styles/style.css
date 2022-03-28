@@ -41,7 +41,7 @@ header {
   
   header ul {
     display: flex;
-    gap: 1em;
+    gap: 2em;
   }
   
   header ul a {
@@ -68,6 +68,7 @@ header {
   .hamburger{
     cursor: pointer;
     display:none;
+    padding: 5px;
     transition: 0.3s;
   
   }
@@ -81,6 +82,8 @@ header {
   .header-mobile-phone{
     transition: 0.3s;
     cursor: pointer;
+    padding: 5px;
+
   }
   .header-mobile-phone:hover{
     transform:scale(1.1)
@@ -134,8 +137,7 @@ header {
     background-image: url(../images/top-img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: fixed;
-    background-position:center;
+    background-position:center center;
     display: flex;
     align-items: center;
   }
@@ -151,11 +153,11 @@ header {
   }
   .main-hero-text h1{
     font-size: 2.5em;
-    text-shadow:  -2px 0px 0px #2d2d2d;
+    text-shadow:  2px 0px 2px #2d2d2d;
   }
   .main-hero-text p{
     max-width:650px;
-    text-shadow: 1px 1px 0px #2d2d2d;;
+    text-shadow: 2px 1px 2px #2d2d2d;;
 
 
   }
@@ -165,7 +167,7 @@ header {
     background-color: rgb(121, 55, 129);
     border-radius: 5px;
     color: rgb(218, 218, 218);
-    text-shadow: 1px 1px 0px #2d2d2d;;
+    text-shadow: 2px 0px 2px #2d2d2d;;
     
 
   }
@@ -191,7 +193,7 @@ header {
     justify-content: flex-start;
     text-align: center;
     color: black;
-    gap: 20px;
+    gap: 10px;
     padding: 0;
   }
 
@@ -202,7 +204,7 @@ header {
     flex-direction: column;
     text-align: center;
     padding-top: 4em;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
   .cards-main-text h1{
     color: rgb(121, 55, 129);
@@ -224,19 +226,19 @@ header {
 
 /* Dividers */
 
-.card-devider-x{
+.card-divider-x{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.devider-img{
+.divider-img{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.card-devider-y{
+.card-divider-y{
   flex-direction: column;
   display: flex;
   align-items: center;
@@ -301,10 +303,10 @@ header {
   }
 
   /* Dividers */
-  .card-devider-x img{
+  .card-divider-x img{
     width:100%;
     }
-  .card-devider-y img{
+  .card-divider-y img{
     height:100%;
     }
 
@@ -313,7 +315,6 @@ header {
       background-size: auto;
     }
     .cards-main-text {
-      gap: 20px;
       padding-top: 20px;
     }
     .cards-main-text h1{
@@ -341,6 +342,28 @@ header {
   /* MOBILE */
 
 @media screen and (max-width: 500px) {
+
+    /* Header */
+
+    .hamburger img {
+      padding: 0px;
+      width: 2em;
+    }
+    
+    header .logo{
+      width:10em;
+    }
+    header img{
+      width:2em;
+    }
+    .mobile-hide{
+      display: none;
+    }
+  
+    nav li {
+      font-weight: 600;
+    }
+
   /* Cards */
 
   .cards-container{
@@ -350,29 +373,35 @@ header {
     justify-content: center;
     gap: 20px;
   }
-  .card-devider-x-mobile{
-    max-width: 10px;
-  }
   
   /* Dividers */
   
+  .card-divider-x-mobile{
+    max-width: 10px;
+  }
+
   .seperator-x-mobile{
     display: flex;
     align-items: center;
     justify-content:space-evenly;
     gap: 3px;
   }
-  .devider-img-mobile{
+  .divider-img-mobile{
     z-index: 2;
     background-color: #fff;
     padding: 0 4px 0px 2px;
   }
-  .devider-img-mobile img{
+  .divider-img-mobile img{
   width:1em;
   }
   
-  .card-devider-y{
+  .card-divider-y{
     display: none;
+  }
+
+  /* Main */
+  main{
+    height:60vh;
   }
     
   
@@ -384,8 +413,8 @@ header {
   .card{
     background-image: url(../images/bg-pattern.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position:center;
+    background-size:cover;
+    background-position:center center;
   }
 
 
@@ -394,33 +423,24 @@ header {
   }
 
   .card:last-child{
-    margin-bottom: 30px!important;
+    margin-bottom: 30px;
   }
 
   .cards-main-text h1{
     font-size: 1.2em;
-    width: 100%;
+    width: 74%;
+  }
+  .cards-main-text p{
+    font-size: 16px;
   }
 
   .main-hero-text h1{
     font-size: 24px;
   }
+  .card p{
+    width: 90%;
+  }
 
-  /* Header */
 
-   .hamburger img {
-    padding: 0px;
-    width: 2em;
-  }
-  
-  header .logo{
-    width:10em;
-  }
-  header img{
-    width:2em;
-  }
-  .mobile-hide{
-    display: none;
-  }
 
 }
