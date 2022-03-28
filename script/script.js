@@ -1,5 +1,5 @@
 var isOpen = false;
-var navbar = document.querySelector('.navbar-section');
+var navBar = document.querySelector('.navbar-section');
 var deviderX = document.querySelectorAll('.card-devider-x');
 var deviderY = document.querySelectorAll('.card-devider-y');
 
@@ -9,7 +9,7 @@ function onInit() {
 }
 
 function toggleNavBar() {
-  isOpen ? navbar.classList.remove('open') : navbar.classList.add('open');
+  isOpen ? navBar.classList.remove('open') : navBar.classList.add('open');
   isOpen = !isOpen;
 }
 
