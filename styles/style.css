@@ -6,9 +6,29 @@
   box-sizing: border-box;
 }
 
+
 @font-face {
   font-family: OpenSans;
   src: url(./fonts/OpenSans-Regular.ttf)
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-border-radius: 100px;
+}
+
+::-webkit-scrollbar:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+  -webkit-border-radius: 100px;
 }
 
 body {
@@ -16,7 +36,6 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: white;
-  width: 100vw;
   position: relative;
 }
 
@@ -32,6 +51,23 @@ ul, a{
   padding-right: 10px;
   padding: 20px;
 
+}
+
+@media  screen and (max-width: 750px) {
+.container {
+  max-width: 750px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding: 10px;
+}
+
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    max-width: 400px;
+    padding: 10px;
+  }
 }
 
 
@@ -61,9 +97,11 @@ header {
   header ul a {
     opacity: 0.7;
     color: black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+
   }
   header ul a:hover {
-border-bottom: 1px solid black;
+  border-bottom: 1px solid black;
   }
 
   header li {
@@ -78,13 +116,28 @@ border-bottom: 1px solid black;
 
   }
   .hamburger{
+    cursor: pointer;
     display:none;
   
   }
   .hamburger img{
+    
    width: 4em;
    padding: 10px;
   }
+
+@media screen and (max-width: 500px) {
+  .hamburger img {
+    padding: 0px;
+    width: 2em;
+  }
+  header .logo{
+    width:10em;
+  }
+  header img{
+    width:2em;
+  }
+}
 
   @media  screen and (max-width: 750px) {
     header{
@@ -102,9 +155,9 @@ border-bottom: 1px solid black;
      .navbar-section{
       height:30vh;
       width:100%;
-      position: relative;
-      display:none;
-
+      position: absolute;
+      transform: translateY(-100%);
+      transition: 0.3s;
     }
     .navbar-main ul{
       position: absolute;
@@ -117,7 +170,8 @@ border-bottom: 1px solid black;
       flex-direction: column;
     }
     .navbar-section.open{
-      display:block;
+      transform: translateY(0%);
+
     }
   }
 
@@ -129,6 +183,7 @@ border-bottom: 1px solid black;
   nav{
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     height:6vh;
     width:100%;
   }
@@ -175,6 +230,7 @@ border-bottom: 1px solid black;
     justify-content: center;
     flex-direction: column;
     gap: 30px;
+    text-align: center;
     
   }
   .main-hero-text h1{
@@ -182,7 +238,7 @@ border-bottom: 1px solid black;
     text-shadow: 2px 3px 0px #0000004f;
   }
   .main-hero-text p{
-    width:80ch;
+    max-width:650px;
     text-shadow: 4px 3px 0px #3636364f;
   }
   .main-hero-text .main-button{
@@ -193,6 +249,37 @@ border-bottom: 1px solid black;
     text-shadow: 4px 3px 0px #3636364f;
 
   }
+  .main-hero-text .main-button:hover{
+    background-color: rgb(88, 57, 92);
+  }
+
+
+  /* TABLET */
+
+  @media  screen and (max-width: 750px) {
+  .main-hero-text h1{
+      font-size: 2em;
+     max-width:430px;
+      
+  }
+
+  .main-hero-text p{
+      font-size: 0.9em;
+      max-width:500px;
+
+  }
+  }
+
+  /* MOBILE */
+
+@media screen and (max-width: 500px) {
+
+  .main-hero-text h1{
+    font-size: 24px;
+  }
+
+}
+
 
   /* Cards  */
 
@@ -209,6 +296,7 @@ border-bottom: 1px solid black;
     align-items: center;
     justify-self: center;
     flex-direction: column;
+    text-align: center;
     padding-top: 4em;
   }
   .cards-main-text h1{
@@ -232,8 +320,9 @@ border-bottom: 1px solid black;
 .card {
   display: flex;
   align-items: center;
-  justify-self: center;
   flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
   color: black;
   padding: 30px;
   gap: 20px;
@@ -246,5 +335,45 @@ border-bottom: 1px solid black;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 20px;
+
 }
+.cards-section{
+  background-image: none;
+
+}
+.card{
+  background-image: url(../images/bg-pattern.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+  padding: 0;
+
+}
+
+.cards-main-text h1{
+  font-size: 1.2em;
+  width: 100%;
+}
+}
+@media screen and (max-width: 750px) {
+
+  .cards-section{
+    background-size: auto;
+  }
+  .cards-main-text {
+    gap: 20px;
+    padding-top: 20px;
+  }
+  .cards-main-text h1{
+    width: 25ch;
+  }
+  
+
+}
+@media screen and (max-width: 500px) {
+
+  .card:last-child{
+    margin-bottom: 30px!important;
+  }
+
 }
