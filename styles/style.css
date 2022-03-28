@@ -21,9 +21,6 @@ ul, a{
   list-style: none;
 }
 
-
-
-
 /* Header */
 header {
   position: relative;
@@ -114,7 +111,6 @@ header {
     align-items: center;
     justify-content:center;
     gap: 30px;
-    padding: 5px;
   }
   nav li{
     display: flex;
