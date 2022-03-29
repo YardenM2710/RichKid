@@ -26,7 +26,7 @@ function createDividersX() {
 
 function createDividersY() {
   var strHtml = '';
-  for (var i = 0; i < 35; i++) {
+  for (var i = 0; i < 30; i++) {
     strHtml += '<img src="./images/seperator-y.png">';
   }
 

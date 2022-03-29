@@ -137,14 +137,13 @@ header {
 
   /* Main Hero  */
 
-  main{
-    height:74vh;
-    background-image: url(../images/top-img.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:center center;
+  .main-hero{
     display: flex;
     align-items: center;
+    background-image: url(../images/top-img.jpg);
+    background-size: cover;
+    background-position:center center;
+    height:74vh;
   }
 
   .main-hero-text{
@@ -154,6 +153,8 @@ header {
     flex-direction: column;
     gap: 30px;
     text-align: center;
+    color: rgb(235, 235, 235);
+ 
     
   }
   .main-hero-text h1{
@@ -179,14 +180,11 @@ header {
     background-color: rgb(99, 26, 104);
 
   }
-
-
  
   /* Cards  */
 
   .cards-section{
     background-image: url(../images/bg-pattern.png);
-    background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
   }
@@ -195,14 +193,16 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
     color: black;
     padding: 0;
+    gap: 10px;
+    max-height: 270px;
   }
 
   .card p{
-    width: 350px
+    width: 90%
   }
 
   .cards-main-text {
@@ -240,6 +240,7 @@ header {
   justify-content: space-evenly;
 }
 
+
 .divider-img{
   display: flex;
   align-items: center;
@@ -250,6 +251,7 @@ header {
   flex-direction: column;
   display: flex;
   align-items: center;
+  width:1px;
 }
 
 .seperator-x-mobile{
@@ -329,12 +331,21 @@ header {
     .cards-main-text {
       padding-top: 20px;
     }
+    .card{
+      gap: 5px;
+    }
     .cards-main-text h1{
       width: 25ch;
+    }
+ 
+    .card p {
+      font-size: 14px;
     }
     .card img{
       width:7em;
     }
+
+
 
     /* Main Hero */
   .main-hero-text h1{
@@ -415,21 +426,19 @@ header {
   }
 
   /* Main */
-  main{
-    height:60vh;
-  }
+
     
   
   /* Card */
   .cards-section{
-    background-image: none;
-  
+    background-position-x: 97%;
+    background-position-y: 121%;
+    background-size: 224%
   }
-  .card{
-    background-image: url(../images/bg-pattern.png);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position:center center;
+
+
+  .card h1{
+    font-size: 1.2em;
   }
 
 
@@ -447,13 +456,23 @@ header {
   }
   .cards-main-text p{
     font-size: 16px;
+
   }
+
 
   .main-hero-text h1{
     font-size: 24px;
   }
-  .card p{
-    width: 90%;
+  .main-hero-text p{
+    font-size: 16px;
+    width:280px;
+  }
+
+  .main-hero{
+    height:300px;
+  }
+  .main-hero-text{
+    gap: 10px;
   }
 
 
